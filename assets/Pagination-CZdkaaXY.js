@@ -1,0 +1,16 @@
+import{c as d,j as e,B as m}from"./index-D3NDjr5B.js";import{S as N,a as j,b as g,c as v,d as b}from"./select-C-iFrNM3.js";import{C as w}from"./dropdown-menu-DdC2iEtp.js";/**
+ * @license lucide-react v0.503.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const S=[["path",{d:"m15 18-6-6 6-6",key:"1wnfg3"}]],_=d("chevron-left",S);/**
+ * @license lucide-react v0.503.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const k=[["path",{d:"m11 17-5-5 5-5",key:"13zhaf"}],["path",{d:"m18 17-5-5 5-5",key:"h8a8et"}]],$=d("chevrons-left",k);/**
+ * @license lucide-react v0.503.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const C=[["path",{d:"m6 17 5-5-5-5",key:"xnjwq"}],["path",{d:"m13 17 5-5-5-5",key:"17xmmf"}]],y=d("chevrons-right",C),z=12,E=[12,24,36,48];function A(n,t){if(t<=7)return Array.from({length:t},(a,l)=>l+1);const s=[];s.push(1),n>3&&s.push("...");const r=Math.max(2,n-1),c=Math.min(t-1,n+1);for(let a=r;a<=c;a++)s.push(a);return n<t-2&&s.push("..."),t>1&&s.push(t),s}function I(n){const{page:t,limit:s,totalCount:r}=n;if(r===0)return"No items";const c=(t-1)*s+1,a=Math.min(t*s,r);return`Showing ${c}-${a} of ${r}`}function M({pagination:n,onPageChange:t,onPageSizeChange:s,showPageSize:r=!0,className:c=""}){const{page:a,totalPages:l,hasNextPage:u,hasPrevPage:x}=n,f=A(a,l);return l<=1?null:e.jsxs("div",{className:`flex flex-col sm:flex-row items-center justify-between gap-4 ${c}`,children:[e.jsx("div",{className:"text-sm text-muted-foreground",children:I(n)}),e.jsxs("div",{className:"flex items-center gap-2",children:[e.jsx(m,{variant:"outline",size:"icon",onClick:()=>t(1),disabled:!x,className:"hidden sm:flex touch-target","aria-label":"First page",children:e.jsx($,{className:"h-4 w-4"})}),e.jsx(m,{variant:"outline",size:"icon",onClick:()=>t(a-1),disabled:!x,className:"touch-target","aria-label":"Previous page",children:e.jsx(_,{className:"h-4 w-4"})}),e.jsx("div",{className:"flex items-center gap-1",children:f.map((i,p)=>{if(i==="...")return e.jsx("span",{className:"px-2 text-muted-foreground",children:"..."},`ellipsis-${p}`);const o=i,h=o===a;return e.jsx(m,{variant:h?"default":"outline",size:"icon",onClick:()=>t(o),className:`touch-target ${h?"pointer-events-none":""}`,"aria-label":`Page ${o}`,"aria-current":h?"page":void 0,children:o},o)})}),e.jsx(m,{variant:"outline",size:"icon",onClick:()=>t(a+1),disabled:!u,className:"touch-target","aria-label":"Next page",children:e.jsx(w,{className:"h-4 w-4"})}),e.jsx(m,{variant:"outline",size:"icon",onClick:()=>t(l),disabled:!u,className:"hidden sm:flex touch-target","aria-label":"Last page",children:e.jsx(y,{className:"h-4 w-4"})})]}),r&&s&&e.jsxs("div",{className:"flex items-center gap-2",children:[e.jsx("span",{className:"text-sm text-muted-foreground whitespace-nowrap",children:"Per page:"}),e.jsxs(N,{value:n.limit.toString(),onValueChange:i=>s(Number(i)),children:[e.jsx(j,{className:"w-20 h-9 touch-target",children:e.jsx(g,{})}),e.jsx(v,{children:E.map(i=>e.jsx(b,{value:i.toString(),children:i},i))})]})]})]})}export{z as D,M as P};
